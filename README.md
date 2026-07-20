@@ -10,7 +10,7 @@ Alat ini melakukan rekon pasif terhadap daftar subdomain dengan cara:
 
 Semua temuan bersifat kandidat – Anda wajib memverifikasi secara manual sebelum melaporkan melalui program VDP/bug-bounty resmi.
 
----
+
 
 Fitur Utama
 
@@ -28,7 +28,7 @@ Pencatatan terstruktur Log JSON Lines untuk konsumsi oleh SIEM atau pipa data.
 Beragam format laporan CSV, JSON, Markdown, HTML, dan ringkasan teks biasa.
 Berkas konfigurasi Muat pengaturan dari berkas JSON; opsi CLI selalu menimpa.
 
----
+
 
 Instalasi
 
@@ -40,7 +40,7 @@ chmod +x tools_cname   # opsional
 
 Prasyarat: Node.js versi 12 atau lebih baru (menggunakan dns.promises dan fs bawaan).
 
----
+
 
 Cara Penggunaan
 
@@ -61,7 +61,7 @@ Berkas (-i) node cname_checker.js -i domains.txt
 Daftar langsung (--targets) node cname_checker.js --targets sub1.example.com,sub2.example.com
 Pipa stdin atau - cat domains.txt \| node cname_checker.js atau node cname_checker.js -i -
 
----
+
 
 Opsi Command Line
 
@@ -115,7 +115,7 @@ Opsi Keterangan
 -q, --quiet Kurangi keluaran yang tidak penting.
 -h, --help Tampilkan bantuan.
 
----
+
 
 Contoh Penggunaan
 
@@ -149,7 +149,7 @@ Menambahkan sidik jari eksternal dari umpan tim:
 node tools_cname.js -i domains.txt --fingerprints-url https://internal.example.com/fingerprints.json
 ```
 
----
+
 
 Berkas Keluaran
 
@@ -164,7 +164,7 @@ Jika opsi --markdown atau --html digunakan, berkas tambahan akan dibuat.
 
 Pada penyimpanan parsial (misalnya karena SIGINT), awalan menjadi <awalan>_PARTIAL.*.
 
----
+
 
 Kode Keluar
 
@@ -174,7 +174,6 @@ Kode Makna
 2 Pemindaian selesai, setidaknya satu potensi takeover terdeteksi. Berguna untuk gerbang CI/CD.
 130 Proses dihentikan secara manual (SIGINT/SIGTERM); laporan parsial telah disimpan.
 
----
 
 Berkas Konfigurasi
 
@@ -193,7 +192,7 @@ Anda dapat menyimpan opsi bawaan dalam berkas JSON (mis. config.json) dan memuat
 
 Opsi CLI selalu menimpa opsi dari berkas konfigurasi.
 
----
+
 
 Basis Data Sidik Jari
 
@@ -209,7 +208,7 @@ Daftar sidik jari bawaan mencakup penyedia cloud paling umum. Anda dapat menamba
 
 Semua sidik jari ditambahkan ke daftar bawaan.
 
----
+
 
 Lisensi
 
@@ -227,7 +226,7 @@ Dengan ketentuan:
 
 Untuk lisensi komersial, hubungi penulis.
 
----
+
 
 Peringatan
 
@@ -236,18 +235,18 @@ Alat ini melakukan deteksi pasif; tidak melakukan eksploitasi apa pun.
 Selalu verifikasi secara manual setiap temuan sebelum melaporkan ke program VDP/bug-bounty.
 Penulis tidak bertanggung jawab atas penyalahgunaan atau kerusakan yang ditimbulkan oleh perangkat lunak ini.
 
----
+
 
 Kontribusi
 
 Kontribusi sangat diterima! Silakan buka isu atau kirim permintaan tarik untuk perbaikan, perbaikan galat, atau sidik jari baru.
 
----
+
 
 Kontak
 
 Untuk pertanyaan atau lisensi komersial, silakan buka isu di GitHub.
 
----
+
 
 Selamat memindai dengan penuh tanggung jawab!
